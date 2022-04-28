@@ -2,4 +2,4 @@
 
 Cloud Architecture Methodology + Security 
  
- - ninih 
+ - IP / Subnet Calculator : https://www.subnet-calculator.com
