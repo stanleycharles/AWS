@@ -1,0 +1,100 @@
+⬛️ IAM Enumeration
+
+
+----------------------------------------------------
+
+
+
+Install AWS CLI
+
+sudo apt install awscli
+
+
+
+Install AWS SAM
+
+sha256sum aws-sam-cli-linux-x86_64.zip
+unzip aws-sam-cli-linux-x86_64.zip -d sam-installation
+sudo ./sam-installation/install
+sam --version
+
+
+
+-----------------------------------------------------
+
+
+
+AWS Configuration
+
+
+aws configure
+AWS Access Key ID [None]: AKIAUXXXXXXXXXXXXXX
+AWS Secret Access Key [None]: wFVfsOeRXXXXXXXXXXXXXXXXXXXXXXXXX
+Default region name [None]: ap-southeast-1
+Default output format [None]:
+
+
+IAM list Users
+# aws iam list-users
+
+
+IAM Group User List + Group Name
+# aws iam list-groups-for-user --user-name ad-admin
+
+
+Enum AWS managed & inline policies for users
+# aws iam list-groups-for-user --user-name ad-user
+aws iam list-user-policies --user-name ad-admin
+aws iam list-attached-user-policies --user-name ad-user
+aws iam list-user-policies --user-name ad-user
+
+
+Enum user's signing certificates
+# aws iam list-signing-certificates --user-name ad-user
+
+Check for public SSH keys for users
+# aws iam list-ssh-public-keys --user-name ad-user
+
+aws iam get-ssh-public-key --user-name ad-user --encoding P_E_M --ssh-public-key-id APKAUAXXXXXXXXXXX
+
+Check for MFA for User
+# aws iam list-mfa-devices
+
+aws iam list-virtual-mfa-devices
+
+Check if the user haave console login profile
+# aws iam get-login-profile --user-name ad-user
+
+Enum IAM Groups
+# aws iam list-groups
+
+aws iam list-group-policies --group-name ad-admin
+aws iam get-policy --policy-arn _arn_:aws:iam::aws:policy/_Administrator_Access
+aws iam get-policy-version --policy-arn _arn_:aws:iam::aws:policy/_Administrator_Access --version-id v1
+aws iam list-attached-group-policies --group-name ad-production
+aws iam get-policy-version --policy-arn _arn_:aws:iam::aws:policy/_AmazonS_3Full_Access --version-id v1
+
+
+Enum IAM Policies
+# aws iam list-policies
+
+
+Refine thw search
+# aws iam list-policies | grep "customer-managed"
+            
+aws iam get-policy --policy-arn _arn_:aws:iam::_27638_4657722:policy/ad-customer-managed-policy
+aws iam get-policy-version --policy-arn _arn:aws:iam::_2763_84657722:policy/ad-customer-managed-policy --version-id v1
+
+Enum IAM Roles
+#  aws iam list-roles
+
+aws iam get-role --role-name ad-loggingrole
+
+
+Check for role policies
+# aws iam list-role-policies --role-name ad-loggingrole
+
+
+
+
+

