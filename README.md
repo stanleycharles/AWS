@@ -10,4 +10,5 @@ Security
  - Cloudsecdocs : https://cloudsecdocs.com
  - Cloudgoat : https://rhinosecuritylabs.com/aws/cloudgoat-vulnerable-design-aws-environment
  - Hacking the Cloud : https://hackingthe.cloud
+ - Stratus : https://stratus-red-team.cloud
  - Cloud MITRE Matrix : https://attack.mitre.org/matrices/enterprise/cloud
