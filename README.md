@@ -3,7 +3,7 @@
 Cloud Architecture Methodology + Security 
  
 Networking
- - IP / Subnet Calculator : https://www.subnet-calculator.com
+ - IP / Subnet Calculator : https://www.site24x7.com/tools/ipv4-subnetcalculator.html
 
 Security
  - AWS SMR : https://summitroute.com/downloads/aws_security_maturity_roadmap-Summit_Route.pdf
