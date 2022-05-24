@@ -1,10 +1,10 @@
-# VPC Project on AWS
+# AWS Organisation Project
 
-### How to create a VPC cloud infrastruture for an entreprise on AWS
+### How to create a organisation cloud infrastruture for an entreprise on AWS
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20Project%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
 
-Scope: 1 entreprise + 2 succursals
+Scope: 
 
 After getting my AWS certifications, I wanted to find some resources to improve my noob skillz and learn more about tools offered by the Amazon cloud solution.
 
