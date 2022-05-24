@@ -7,8 +7,8 @@ AWS Cloud Projects
  - [AWS VPC](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project.md)
  - [AWS Workspaces](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project.md)
  - [AWS Data Migration Services](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project.md)
- - [Advanced Dynamic VPN-BGP Site-to-Site](https://duckduckgo.com)
- - [My Cloud Resume Challenge](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project.md)
+ - [Advanced Dynamic VPN-BGP Site-to-Site](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project.md)
+ - [My Cloud Resume Challenge](https://github.com/stanleycharles/mycloudresumechallenge)
 
 Tools
  - Diagrams : https://app.diagrams.net
