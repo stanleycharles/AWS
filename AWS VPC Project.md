@@ -1,8 +1,10 @@
-# My Cloud Resume Challenge
+# VPC Project on AWS
 
-### Set up a Resume in the Cloud w/ AWS Step by Step.
+### How to create a VPC cloud infrastruture for an entreprise on AWS
 
 ![This is an image](https://github.com/stanleycharles/mycloudresumechallenge/blob/main/mycloudresumechallenge%20diagram.png)
+
+Scope: 1 entreprise + 2 succursals
 
 After getting my AWS certifications, I wanted to find some resources to improve my noob skillz and learn more about tools offered by the Amazon cloud solution.
 
