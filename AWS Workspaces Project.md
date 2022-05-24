@@ -2,7 +2,7 @@
 
 ### How to create a cloud desktop workspace infrastruture for an entreprise on AWS
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20Diagram.png)
 
 Scope: 
 
