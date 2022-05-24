@@ -1,4 +1,4 @@
-# AWS Organisation Project
+# AWS Organisations Project
 
 ### How to create a organisation cloud infrastruture for an entreprise on AWS
 
