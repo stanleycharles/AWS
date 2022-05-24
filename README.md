@@ -1,7 +1,15 @@
 # AWS
 
 Cloud Architecture Methodology + Security 
- 
+
+AWS Cloud Projects
+ - AWS Organisations
+ - AWS VPC
+ - AWS Workspaces
+ - AWS Data Migration Services
+ - Advanced Dynamic VPN-BGP Site-to-Site
+ - My Cloud Resume Challenge
+
 Tools
  - Diagrams : https://app.diagrams.net
 
