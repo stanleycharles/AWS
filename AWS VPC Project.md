@@ -2,7 +2,7 @@
 
 ### How to create a VPC cloud infrastruture for an entreprise on AWS
 
-![This is an image](https://github.com/stanleycharles/mycloudresumechallenge/blob/main/mycloudresumechallenge%20diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20Project%20Diagram.png)
 
 Scope: 1 entreprise + 2 succursals
 
