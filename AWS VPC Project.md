@@ -96,6 +96,8 @@ Finally, Auto-assign the Ipv6 mode manually on the 12 subnets.
 
 (image)
 
+How to connect the VPC to the Internet
+
 
   ---
   
