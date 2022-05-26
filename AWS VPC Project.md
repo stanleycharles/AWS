@@ -29,10 +29,17 @@ Now when your start this design process, there are a few things that you need to
   - 192.168.25.0/24 ``(Seattle)`` (192.168.25.0 -> 192.168.25.255)
 
 More Considerations
+
  - VPC minimum /28 (16 IPs), maximum /16 (65456 IPs)
  - Personal preference for the 10.x.y.z range
  - Avoid commom ranges to avoid future issues
- - 
+ - Reserve 2+ networks per region being used per account
+ - 3 US (regions), Europe (1), Australia (1) (5)x2 - Assume 4 accounts
+ - Total 40 ranges (ideally)
+
+VPC Sizing 
+
+(image)
 
 ### Scope
 
@@ -40,8 +47,10 @@ Step through how to implement the multi-tier subnet design for an entreprise inc
 
 We're going to be implementing the diagram structure which actually 12 subnets on 3 availability zones. This subnet calculator site will give us all the ip address structure that we will need to configure the subnets on the VPC.
 
-(image)
+(image sub cal)
 
+ - The Entreprise can become a huge global entity
+ - Use the 10.16 -> 10.127 rangs avoiding Google
  - So the 1st subnet will be 10.16.0.0 and the last 10.16.176.0
  - Implemented in 3 availability zones A, B, C
  - Spared in 4 subnets sections: Reserved, database (db), application (app), web
@@ -68,7 +77,10 @@ sn-web-C 10.16.176.0/20 AZC IPv6 0B
 Remember to enable auto assign ipv6 on every subnet you create.
 ```
 
-
+Recap 
+ - Start at 10.16 ``US1``, 10.32 ``US2``, 10.48 ``US3``, 10.64 ``EU``, 10.80 ``AUS``
+ - Each AWS account has 1/4th
+ - Each region gets /16 ranges, 4 VPCs per region
 
 
 
