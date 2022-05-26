@@ -22,11 +22,11 @@ The Master account will create and be convert to the management account of this 
 
 To integrate HR & Development accounts into  the organisation, the Master account will sent a **verification email** to them  
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Invitation.png)
 
 After the validation, HR & Development will integrate the organisation.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Accounts.png)
 
 Now, we will see how we can role switch into this HR AWS account witch is now a member of the organisation.
 
@@ -34,24 +34,26 @@ We will also create an `OrganizationAccountAccessRole` in the `Master Account`, 
 
 The role `OrganizationAccountAccessRole` will get the **administrator access** to everything. After creating this role, clic on `Switch role`.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Back.png)
 
 And fill out all the cases: The Account HR or Development ID number, a role and a random display name.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-Prod.png)
 
 It's going to create an entry within the console GUI and this is stored in your browser.
-This is just creating a shortcut so you can easily access in the future. And it's actuallu using the `OrganizationAccountAccessRole` API Call to assume the role that we just created aka the administrator access role.
+This is just creating a shortcut so you can easily access in the future. And it's actually using the `OrganizationAccountAccessRole` API Call to assume the role that we just created aka the administrator access role.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Role-Prod.png)
 
 And Last thing, to integrate the Finance account into the organisation, we will create a **brand new** account directly with AWS Organisations. This time won't invite an existing AWS account like we did with `HR` & `Development`.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-Dev.png)
 
 Now, the organisation have 3 (4) accounts easily switchable if you already did the same adding role process to the Finance account into the organisation.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-Dev.png)
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Role-Dev.png)
 
 
   ---
