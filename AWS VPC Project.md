@@ -79,10 +79,22 @@ Remember to enable auto assign ipv6 on every subnet you create.
 
 Recap 
  - Start at 10.16 ``US1``, 10.32 ``US2``, 10.48 ``US3``, 10.64 ``EU``, 10.80 ``AUS``
- - Each AWS account has 1/4th
- - Each region gets /16 ranges, 4 VPCs per region
+ - /16 per VPC - 3 AZ (+1), 3 Tiers (+1) - 16 subnets
+ - /16 split into 16 subnets = /20 per subnet (4091 IPs)
 
+Create a subnet manually (exemple: ``sn-reserved-A 10.16.0.0/20 AZA IPv6 00``)
 
+(image)
+
+And do the procedure for the 11 others subnets (same process).
+
+Now you can see the 12 subnets by name,
+
+(image)
+
+Finally, Auto-assign the Ipv6 mode manually on the 12 subnets.
+
+(image)
 
 
   ---
