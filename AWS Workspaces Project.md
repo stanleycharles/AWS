@@ -6,8 +6,6 @@
 
 ### Scope
 
-1 organisation + 2 succursals
-
 `Amazon Workspaces` is a Desktop As A Service (DAAS). 
 It delivers managed `Linux` and `Windows` Desktops of various sizes and capabilities and integrates fully with AWS products and Services.
 
