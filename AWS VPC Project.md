@@ -37,9 +37,9 @@ More Considerations
  - 3 US (regions), Europe (1), Australia (1) (5)x2 - Assume 4 accounts
  - Total 40 ranges (ideally)
 
-VPC Sizing 
+VPC Sizing Model
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20Sizing%20Model.png)
 
 ### Scope
 
@@ -47,7 +47,7 @@ Step through how to implement the multi-tier subnet design for an entreprise inc
 
 We're going to be implementing the diagram structure which actually 12 subnets on 3 availability zones. This subnet calculator site will give us all the ip address structure that we will need to configure the subnets on the VPC.
 
-(image sub cal)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20Subnet%20Calculator.png)
 
  - The Entreprise can become a huge global entity
  - Use the 10.16 -> 10.127 rangs avoiding Google
@@ -84,20 +84,21 @@ Recap
 
 Create a subnet manually (exemple: ``sn-reserved-A 10.16.0.0/20 AZA IPv6 00``)
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20%20-%20Create%20Subnet.png)
 
 And do the procedure for the 11 others subnets (same process).
 
-Now you can see the 12 subnets by name,
+Now you can see the 12 subnets by name
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20VPC%20Enumeration.png)
 
-Finally, Auto-assign the Ipv6 mode manually on the 12 subnets.
+Finally, Auto-assign the Ipv6 mode manually on the 12 subnets. (exemple: ``sn-app``)
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20Enable%20IPv6.png)
 
 How to connect the VPC to the Internet
 
+... 
 
   ---
   
