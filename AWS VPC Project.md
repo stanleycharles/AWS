@@ -4,17 +4,37 @@
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20Project%20Diagram.png)
 
-### Scope
+### Reminder
 
 Steps through the design choices around VPC design and IP planning.
 
-When creating a VPC, we'll need first, to decide on is the IP range that the VPC will use: The VPC Cider. 
+When creating a VPC, we'll need first, to decide on is the IP range that the VPC will use: The ``VPC Cider``. 
 Deciding on an IP plan and VPC structure in advance is one of the most critically important things you will do as the solutions Architect because it's not easy to change later and it will cause you a world of pain if you don't get it right.
 
 Now when your start this design process, there are a few things that you need to keep in mind:
- - First, What size should the VPV be ? This influences how many things, how many services can fit into that VPC. Each services has one or more IPs and they occupy the space inside a VPC. 
- - Secondly, we need to consider all the networks that we'll use or that we'll need to interact with. So choosing widely at this stage is essential. Be mindful be
+
+ - What size should the VPC be
+ - Are there any Networks we can't use...
+ - VPC's Cloud, On-premises. Partners & Vendors
+ - VPC Structure - Tiers & Resiliency (Availability) Zones
+ 
+ IP Ranges to Avoid when creating a Business VPC:
+ 
+  - 192.168.10.0/24 (192.168.10.0 -> 192.168.10.255)
+  - 10.0.0.0/16 ``(AWS)`` (10.0.0.0 -> 10.0.255.255)
+  - 10.128.0.0/9 ``(Google)`` (10.128.0.0 -> 10.255.255.255)
+  - 172.31.0.0/16 ``(Azure)`` (172.31.0.0 -> 172.31.255.255)
+  - 192.168.15.0/24 ``(London)`` (192.168.15.0 -> 192.168.15.255)
+  - 192.168.20.0/24 ``(NYC)`` (192.168.20.0 ->192.168.20.255
+  - 192.168.25.0/24 ``(Seattle)`` (192.168.25.0 -> 192.168.25.255)
+
+More Considerations
+ - VPC minimum /28 (16 IPs), maximum /16 (65456 IPs)
+ - Personal preference for the 10.x.y.z range
+ - Avoid commom ranges to avoid future issues
  - 
+
+### Scope
 
 Step through how to implement the multi-tier subnet design for an entreprise including IPv6 configuration for subnets
 
@@ -22,10 +42,10 @@ We're going to be implementing the diagram structure which actually 12 subnets o
 
 (image)
 
-So the 1st subnet will be 10.16.0.0 and the last 10.16.176.0
-Implemented in 3 availability zones A, B, C
-Spared in 4 subnets sections: Reserved, database (db), application (app), web
-With IPv6 Activated
+ - So the 1st subnet will be 10.16.0.0 and the last 10.16.176.0
+ - Implemented in 3 availability zones A, B, C
+ - Spared in 4 subnets sections: Reserved, database (db), application (app), web
+ - With IPv6 Activated
 
 ```
 NAME CIDR AZ CustomIPv6Value
