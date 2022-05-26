@@ -92,11 +92,11 @@ Now you can see the 12 subnets by name
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20VPC%20Enumeration.png)
 
-Finally, Auto-assign the Ipv6 mode manually on the 12 subnets. (exemple: ``sn-app``)
+Finally, Auto-assign the Ipv6 mode manually on the 12 subnets. (exemple: ``sn-app-A``)
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20Enable%20IPv6.png)
 
-How to connect the VPC to the Internet
+### How to connect the VPC to the Internet
 
 ... 
 
