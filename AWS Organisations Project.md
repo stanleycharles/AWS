@@ -47,7 +47,7 @@ This is just creating a shortcut so you can easily access in the future. And it'
 
 And Last thing, to integrate the Finance account into the organisation, we will create a **brand new** account directly with AWS Organisations. This time won't invite an existing AWS account like we did with `HR` & `Development`.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-Dev.png)
+![This is an image]https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20AWS%20Organisations%20-%20New%20Account-Dev.png)
 
 Now, the organisation have 3 (4) accounts easily switchable if you already did the same adding role process to the Finance account into the organisation.
 
