@@ -1,33 +1,60 @@
 # AWS Organisations Project
 
-### How to create a organisation cloud infrastruture for an entreprise on AWS
+## How to create a cloud organisation infrastruture for an entreprise on AWS
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
 
-Scope: 
+### Scope
 
-After getting my AWS certifications, I wanted to find some resources to improve my noob skillz and learn more about tools offered by the Amazon cloud solution.
+The `GENERAL` account will become the `MASTER` account for the organisation
 
-After some research, many people seem to recommend a website to start with. It's a 16-step-challenge called `My Cloud Resume Challenge`.
+We will invite `HR` & `DEVELOPMENT` accounts as MEMBER accounts and create the `Finance` account as a MEMBER account.
 
-The goal of this challenge is to be able to create a `static website` on AWS, integrate a **visit counter** and update it in `CI/CD pipeline` with the `Github` platform.
+Before that, you'll need the email address of the master account (who also name as the billing master)
+ - masteraccount@gmail.com
 
-To complete this challenge, 2 ways are possible:
+And 3 seperate emails of different existing  AWS accounts and associate them to the AWS Organisations.
+ - hr@gmail.com
+ - development@gmail.com
+ - finance@gmail.com
 
- - Either go through the GUI interface of `AWS` (SaaS), which is the easiest way to do and it's also more ergonomic. It also allows to get familiar with the interface.
+The Master account will create and be convert to the management account of this AWS Organisation.
 
- - Or by `CloudFormation` (IaaS), by directly integrating code templates (mainly in `YAML` or `JSON`) to gain in speed and efficiency. This method is clearly more **technical**. Mastering the AWS back-end command tool `CLI` and `SAM` are a must. 
+To integrate HR & Development accounts into  the organisation, the Master account will sent a **verification email** to them  
 
-The result of my challenge can be found on this site : https://stanleycharles.me
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
 
-Beyond its Web 1.0 appearance, this website is **100% hosted** in the Cloud and includes in its structure services such as `S3`, `Lambda`, `API Gateway`, `DynamoDB` and `CloudFront` among others.
+After the validation, HR & Development will integrate the organisation.
 
-This challenge was initiated by **Forrest Brazeal** and here's his Challenge in detail: 
-  - https://cloudresumechallenge.dev/docs/the-challenge/aws/  
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+
+Now, we will see how we can role switch into this HR AWS account witch is now a member of the organisation.
+
+We will also create an `OrganizationAccountAccessRole` in the `Master Account`, and use this role to switch between accounts.
+
+The role `OrganizationAccountAccessRole` will get the **administrator access** to everything. After creating this role, clic on `Switch role`.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+
+And fill out all the cases: The Account HR or Development ID number, a role and a random display name.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+
+It's going to create an entry within the console GUI and this is stored in your browser.
+This is just creating a shortcut so you can easily access in the future. And it's actuallu using the `OrganizationAccountAccessRole` API Call to assume the role that we just created aka the administrator access role.
+
+And Last thing, to integrate the Finance account into the organisation, we will create a **brand new** account directly with AWS Organisations. This time won't invite an existing AWS account like we did with `HR` & `Development`.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+
+Now, the organisation have 3 (4) accounts easily switchable if you already did the same adding role process to the Finance account into the organisation.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
+
 
   ---
   
   ## Ressources
-   - https://blog.mindrepo.net/cloud-resume-challenge-part-1-the-challenge-explained
-   - https://shishirkh.medium.com/guide-to-the-cloud-resume-challenge-part-1-s3-and-cloudfront-fce220cf8f0e
-   - https://coolum001.github.io/cloudresume1.html
+   - https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html
