@@ -46,6 +46,24 @@ Now, the Active Directory is created, Let's create a desktop or laptop environnm
 Now, Select Awazon ...
 
 
+Next. we have to select the bundle that your workspace will use. Depends on what you
+need. So we will take a Performance Windows 10 version Free tier eligible.
+
+(image)
+
+Now the Workspace is finally created (take some time, 20-30min), we will recieve an
+email to complete the setup instruction with an web browser URL. Clic on that URL and
+fill out the infos just created + create a new password.
+
+(image)
+
+Next, we will be taken to the Amazon Workspaces client download page and we will need to
+dowmload the client for the operating system that you're using.
+
+(image)
+
+Now install the program on your desktop or laptop. 
+
 
 
 
