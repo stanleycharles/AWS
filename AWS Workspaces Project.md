@@ -59,5 +59,7 @@ Now, Select Awazon ...
   
   ## Ressources
    - https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html
+   - https://aws.amazon.com/fr/directoryservice/
+   - https://cantrill.io/
    
 
