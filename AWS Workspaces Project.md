@@ -44,7 +44,7 @@ Now, the Active Directory is created, Let's create a desktop or laptop environnm
 (Image)
 
 
-Now, Select
+Now, Select Awazon ...
 
 
 
