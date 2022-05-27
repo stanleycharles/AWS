@@ -98,6 +98,15 @@ Finally, Auto-assign the Ipv6 mode manually on the 12 subnets. (exemple: ``sn-ap
 
 ### How to connect the VPC to the Internet
 
+ - First we create and attach an ``Internet Gateway`` to the VPC. 
+ - So then we create a ``custom route table`` and we associate it with the web subnet.
+ - Then we add IPv4, and optionlly IPv6 default routes to the table routes with the target being the Internet gateway
+ - Then finally we configure the subnets to allocate IPv4 addresses
+
+So, after this config, the subnet is classified as being a public subnet and any services inside that subnet with public IP addresses can communicate to the internet and vice-versa, and also they can communication with the AWS public zone as long as there's no other security limitations that are in play.
+
+
+
 ... 
 
   ---
