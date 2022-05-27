@@ -43,8 +43,18 @@ Now, the Active Directory is created, Let's create a desktop or laptop environnm
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Directory%20Service%20-%20AD%20Created.png)
 
-Now, Select Awazon ...
+Now, that the Directory Service is in the active state, we can proceed and actually create a workspace. After clicking on Amazon Workspaces and on Launch Workspaces, we will need to select the Directory just created. 
+Next, we will need to provide 2 different subnets within the VPC that will be used to launch Workspaces. Pick those that are availiable.
 
+(image)
+
+Then, we will need to create our 1st Workspaces user with a Username, First name, Last name and email. This email address will be used to send setuo instructions for this workspace.
+
+(image)
+
+Scroll down and we should see that we've now got a user created in that directory.
+
+(image)
 
 Next. we have to select the bundle that your workspace will use. Depends on what you
 need. So we will take a Performance Windows 10 version Free tier eligible.
@@ -62,15 +72,22 @@ dowmload the client for the operating system that you're using.
 
 (image)
 
-Now install the program on your desktop or laptop. 
+Now install the program on your desktop or laptop.
 
+(image)
 
+Then, we will be placed in a login prompt. Enter the username and the password that we created before.
 
+(image)
 
+After a few moments, we will be logged into your workspace. This is a Windows desktop that we selected ealier.
 
+(image)
 
+**To finish**, we're going to test the Internet connexion that we configured. The ``APP subnets`` are interconnected to the ``WEB subnets`` (see diagrams). These WEB subnets have NAT Gateways interconnected with a Internet Gateway who have access to the web.
+Open a browser and see if the internet connexion works.
 
-
+(image)
 
   ---
   
