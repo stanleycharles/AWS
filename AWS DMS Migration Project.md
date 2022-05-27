@@ -1,6 +1,6 @@
 # AWS DMS Migration Project
 
-## How to transfer a web application or database securely on-premises into the AWS Cloud with Data Migration Services
+## How to transfer a web application or database securely on-premises into the AWS Cloud with Database Migration Services
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20Migration%20Diagram.png)
 
@@ -14,10 +14,15 @@ The on-premises environment is a virtual web server (simulated using EC2) and a 
 
 We will be migrating this into AWS and running the architecture on an EC2 webserver and RDS managed SQL database.
 
+In the diagram
+ - On the left, this is the type of environment which we might have on-premises, and we're looking to migrate into AWS
+ - On the right, we have the AWS environment and we're going to be provisioning an EC2 Web server (in green) and an RDS instance to store the database (in blue).
+ - And We will be copying the content over using SSH (in red) and using the Database Migration Service (DMS).
+ - And then we will be copying the content over using SSH and using the Database Migration Service to perform a synchronization of the data from the source to the destination
 
   ---
   
   ## Ressources
-   - https://aws.amazon.com
+   - https://aws.amazon.com/dms
    - https://cantrill.io
    
