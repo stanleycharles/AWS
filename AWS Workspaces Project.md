@@ -46,48 +46,51 @@ Now, the Active Directory is created, Let's create a desktop or laptop environnm
 Now, that the Directory Service is in the active state, we can proceed and actually create a workspace. After clicking on Amazon Workspaces and on Launch Workspaces, we will need to select the Directory just created. 
 Next, we will need to provide 2 different subnets within the VPC that will be used to launch Workspaces. Pick those that are availiable.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Create%20Workspaces.png)
 
-Then, we will need to create our 1st Workspaces user with a Username, First name, Last name and email. This email address will be used to send setuo instructions for this workspace.
+Then, we will need to create our 1st Workspace user with a Username, First name, Last name and email. This email address will be used to send setuo instructions for this workspace.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Add%20AD%20User.png)
 
 Scroll down and we should see that we've now got a user created in that directory.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Add%20AD%20Verif.png)
 
 Next. we have to select the bundle that your workspace will use. Depends on what you
 need. So we will take a Performance Windows 10 version Free tier eligible.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Select%20Bundles.png)
 
-Now the Workspace is finally created (take some time, 20-30min), we will recieve an
-email to complete the setup instruction with an web browser URL. Clic on that URL and
+Now the Workspace is finally created (take some time, 20-30min)
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Workspace%20Created.png)
+
+We will recieve an email to complete the setup instruction with an web browser URL. Clic on that URL and
 fill out the infos just created + create a new password.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Web%20Setup%20Portail.png)
 
 Next, we will be taken to the Amazon Workspaces client download page and we will need to
-dowmload the client for the operating system that you're using.
+download the client for the operating system that you're using.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Install%20client.png)
 
 Now install the program on your desktop or laptop.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Install%20client.png)
 
 Then, we will be placed in a login prompt. Enter the username and the password that we created before.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Web%20Workspaces%20Portail.png)
 
 After a few moments, we will be logged into your workspace. This is a Windows desktop that we selected ealier.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Windows.png)
 
 **To finish**, we're going to test the Internet connexion that we configured. The ``APP subnets`` are interconnected to the ``WEB subnets`` (see diagrams). These WEB subnets have NAT Gateways interconnected with a Internet Gateway who have access to the web.
 Open a browser and see if the internet connexion works.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20internet.png)
 
   ---
   
