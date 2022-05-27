@@ -17,8 +17,16 @@ We will be migrating this into AWS and running the architecture on an EC2 webser
 In the diagram
  - On the left, this is the type of environment which we might have on-premises, and we're looking to migrate into AWS
  - On the right, we have the AWS environment and we're going to be provisioning an EC2 Web server (in green) and an RDS instance to store the database (in blue).
- - And We will be copying the content over using SSH (in red) and using the Database Migration Service (DMS).
+ - And We will be copying the content over using SSH (in orange) and using the Database Migration Service (DMS).
  - And then we will be copying the content over using SSH and using the Database Migration Service to perform a synchronization of the data from the source to the destination
+
+### Provision the environment
+
+After creating automatically The VPC & the On-Premises Infrastructures in the diagram via Cloudformation (yaml)
+- A VPC
+- 2 EC2: ``Web application`` is the simulated virtual machine web server , ``Database`` is the
+
+
 
   ---
   
