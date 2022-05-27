@@ -77,7 +77,7 @@ download the client for the operating system that you're using.
 
 Now install the program on your desktop or laptop.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Install%20client.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20-%20Client%20installation.png)
 
 Then, we will be placed in a login prompt. Enter the username and the password that we created before.
 
