@@ -194,7 +194,43 @@ Now, when we're replicating data using DMS, you have a chice of either doing a `
 
 If you have a high voulume application where you expect continued operations on the On-Premise side while we're doing the migration then we might want to pick ``Full + CDC Replication``.
 
-In our case, we're going to do just a standard full migration.
+In our case, we're going to do just a standard full migration. 
+
+Let's go to the AWS management console and click on DMS. We need to create a subnet group. Name this subnet group and select the 2 AWS private subnets (A,B) then click on ``Create subnet group``
+
+(image)
+
+Next Click on ``Replication Instances`` and create one. Name this Replication Instance, select the size and security groups then click on ``Create``
+
+After that, Click on ``Endpoints``. We can think of these as the containers of the configuration for the source and destination databases. 
+
+First, we'll be configuring a ``source endpoint``. Name the endpoint, the source engine, the on-prems IP address, the port, username and the on-prem database password.
+
+(image)
+
+The ``On-Premises Endpoint`` is activated.
+
+(image)
+
+We're going to follow the same process again for the ``destination endpoint`` so re-lick on ``create endpoint``. Now, select the ``target endpoint`` et ``RDS DB Instance`` and fill out the case.
+
+(image)
+(image)
+
+We've created the 2 endpoints neccessary for the migration.
+
+(image)
+
+Next, we need to create the ``migration task``. This is the thing that uses the repilcation Instance together with both of these endpoints that we,ve just configured.
+
+So, let's click on ``Database Migration Tasks`` and create one. Click on the case and select the good replication instance, source & destination endpoints, the migration type and click on ``create task``.
+
+(image)
+
+
+
+
+
 
 
 
