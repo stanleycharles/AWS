@@ -35,18 +35,19 @@ In production, we would be using a VPN or a Direct connect but to simulate that,
 
 On the AWS Management console, we can see these 2 VPCS, created via ``Cloud Formation``
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20VPCs%20Emumeration.png)
 
 Let's create a VPC Peering to connect these 2 VPCs. We should go on ``Peering Connections`` then click on ``Create Peering Connection`` and fill out the necessary informations. 
  - Name your peering connection
- - Select the local VPC: ``onpremVPC`` 192.168.10.0/24
- - Select the AWS VPC: ``awsVPC`` 10.16.0.0/24
+ - Select the local VPC: ``onpremVPC`` 192.168.10.0/24 (VPC requester)
+ - Select the AWS VPC: ``awsVPC`` 10.16.0.0/24 (VPC accepter)
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Peering%20Connection%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Peering%20Connection%20p.2.png)
 
 Your VPC Peer connection is created. Now we have to accepct the request. Make sure that we've got the peering connecttion selected and click on ``Action`` and then ``Accept Request``.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Accept%20VPC%20Peering%20Request.png)
 
 Now, we've got the peering connection betweenthe two VPCs witch creates a secure channel and a gateway object in both VPCs.
 The next step is we need to configure **Routing**.
@@ -57,26 +58,30 @@ To do this, we should click on ``Route Tables``. We can see 3 Routers that we ha
  - awsPrivateRT
  - awsPublicRT
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Route%20Tables%20Enumeration.png)
 
 First, let's configure the ``onpremsPublicRT``. Logically this route table should be redirect towards the AWS environment.
 Select onpremsPublicRT, click on the Route page and click on ``Edit routes``
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20On-Prems%20Public%20Edit%20RT.png)
 
 Now, we will need the IP CIDR of the AWS VPC environment: 10.16.0.0/16 to fill out the destination case. Then in the target case, click on ``Peering Connection`` and select the peering connection that we configure ealier between the 2 VPCs: ``onpremVPC`` & ``awsVPC``. To finish click on ``save routes``.
 Once we've set that, this will mean that the On-premises environment knows how to route traffic through to the AWS environment.
 
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Configure%20On-Prems%20Public%20RT%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Configure%20On-Prems%20Public%20RT%20p.2.png)
+
 Next, we need to edit both of the AWS route tables. AWS has two routes tables: the Private and the Public. But in this demo, we're going to configure just the Public one because the procedure are the same. 
 Select awsPublicRT, click on the Route page and click on ``Edit routes``
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20Public%20Edit%20RT.png)
 
 Now, we will need the IP CIDR of the On-premises VPC environment: 192.168.10.0/24 to fill out the destination case. Then in the target case, click on ``Peering Connection`` and select the peering connection that we configure ealier between the 2 VPCs: ``onpremVPC`` & ``awsVPC``. To finish click on ``save routes``.
 
 (By the way, don't forget to configure the awsPrivateRT).
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Configure%20AWS%20Public%20RT%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Configure%20AWS%20Public%20RT%20p.2.png)
 
 Now we have the secure connection between the simulated On-premises environment. On the AWS environment, we have gateway objects configured in both of the VPCs and then routes configured at both sides so they can communicate.
 
