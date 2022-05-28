@@ -227,46 +227,9 @@ So, let's click on ``Database Migration Tasks`` and create one. Click on the cas
 
 (image)
 
+After few minutes, the ``DMS`` has migrated all the data from the on-premises database through to RDS.
 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+(image)
 
   ---
   
