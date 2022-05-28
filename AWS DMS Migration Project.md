@@ -127,6 +127,44 @@ The AWS EC2 is finally created. Now we can see this new EC2 with the On-Premises
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20EC2%20Activated.png)
 
+### Wordpress Installation on the AWS EC2 web server
+
+Select the AWS EC2 and click on Connect
+
+(image)
+
+Select the Session Manager page and re-click on Connect
+
+(image)
+
+Here's the instructions to install Wordpress
+ - yum -y update
+ - yum -y install httpd mariadb
+ - amazon-linux-extras install -y php7.2
+ - systemctl enable httpd
+ - systemctl start httpd
+
+To configure Wordpress
+ - nano /etc/ssh/sshd_config and put Password Authentification ``Yes``
+
+(image)
+
+And Create a ec2-user new password and restart the EC2 server
+
+(image)
+
+
+###
+
+
+
+
+
+
+
+
+
+
 
 
 
