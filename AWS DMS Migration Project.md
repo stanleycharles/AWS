@@ -153,8 +153,37 @@ And Create a ec2-user new password and restart the EC2 server
 
 (image)
 
+Now, We have to go back to the On-premises ``Web application`` server 
+Before that we're going to ``note`` the Private IPv4 address of AWS EC2 web server somewhere: 10.16.63.147
 
-###
+(image)
+
+So Let's Now configure the ``Web application`` server.
+
+(image)
+
+We're going to use this command. This is ``Secure Copy`` and this is going to copy the html folder to this destination so ``ec2-user@10.16.63.147:/home/ec2-user`` and confirm with the password we've just created.
+
+After the end of this Installation. Go back to the ``AWS EC2 Web server`` to verify if the Wordpress folder in In. We see all the Worpress Assets and configuration. The last command ``cp * -R /var/www/html`` will copy all of these files recursively into the web root server.
+
+(image)
+
+And then the next block of commands will correct any permissions issues on those files that we've just copied.
+
+(image)
+
+To finish, Let's copy the Public IPv4 DNS name of the AWS EC2 Web Server to see if Wordpress is online into the AWS environment. But It's ``Still`` pointing at the ``On-Premises database`` server.
+
+(image)
+(image)
+
+### Migrate Database & Cutover
+
+
+
+
+
+
 
 
 
