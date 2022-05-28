@@ -87,6 +87,18 @@ Now we have the secure connection between the simulated On-premises environment.
 
 ### Create & Configure the AWS Side infrastructure (App and DB)
 
+Here, we're going to be provisioning all of the infrastructure at the AWS side.
+
+First, we're going to start by provisioning the new/empty database within AWS. So this includes an RDS (Relational Database Service) subnet group and an RDS database implementation. (see Diagram on the right, blue part). we're going to use a free tier eligible single AZ implementation of RDS. And that's going to be the end state database for this application migrations.
+
+So currently, the database is stored on the simulated on-premises environment on the ``Database Server`` and we're going to migrate that data across to the RDS instance.
+
+We're also to provisioning an ``EC2 instance`` which will function as the **web application server**. This is going to be a ``Wordpress`` Instance using an ``EBS boot`` and ``data`` volume. And we're going to install Wordpress on this instance. Then migrate all of the non-database assets from the current web server across to this brand new EC@ instance (pink arrow in the diagram). We will be using SSH to sync these non-database assets between the ``Web Application`` and this New EC2 instance.
+
+This EC2 instance will be able to communicate with the On-Premise ``Database`` server and we will have migrated at least the web part of the architecture from the simulated On-Premises environment through to AWS. So Users can definitively connect to this EC2 intance and see the same web application
+
+
+
 
 
 
