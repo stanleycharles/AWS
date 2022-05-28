@@ -37,7 +37,47 @@ On the AWS Management console, we can see these 2 VPCS, created via ``Cloud Form
 
 (image)
 
-Then, Let's create a 
+Let's create a VPC Peering to connect these 2 VPCs. We should go on ``Peering Connections`` then click on ``Create Peering Connection`` and fill out the necessary informations. 
+ - Name your peering connection
+ - Select the local VPC: ``onpremVPC`` 192.168.10.0/24
+ - Select the AWS VPC: ``awsVPC`` 10.16.0.0/24
+
+(image)
+
+Your VPC Peer connection is created. Now we have to accepct the request. Make sure that we've got the peering connecttion selected and click on ``Action`` and then ``Accept Request``.
+
+(image)
+
+Now, we've got the peering connection betweenthe two VPCs witch creates a secure channel and a gateway object in both VPCs.
+The next step is we need to configure **Routing**.
+We need to configure the VPC routers in each VPC to know how to send traffic to the other side of the VPC peer. 
+
+To do this, we should click on ``Route Tables``. We can see 3 Routers that we have to edit. 
+ - onpremsPublicRT
+ - awsPrivateRT
+ - awsPublicRT
+
+(image)
+
+First, let's configure the ``onpremsPublicRT``. Logically this route table should be redirect towards the AWS environment.
+Select onpremsPublicRT, click on the Route page and click on ``Edit routes``
+
+(image)
+
+Now, we will need the IP CIDR of the AWS environment: 10.16.0.0/16 to fill out the destination case. Then in the target case, click on ``Peering Connection`` and select the peering connection that we configure ealier between the 2 VPCs: ``onpremVPC`` & ``awsVPC``. 
+Once we've set that, this will mean that the On-premises environment knows how to route traffic through to the AWS environment.
+
+
+
+
+
+
+
+
+
+Now we have the secure connection between the simulated On-premises environment. On the AWS environment, we have gateway objects configured in both of the VPCs and then routes configured at both sides so they can communicate.
+
+
 
 
 
