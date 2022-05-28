@@ -64,8 +64,29 @@ Select onpremsPublicRT, click on the Route page and click on ``Edit routes``
 
 (image)
 
-Now, we will need the IP CIDR of the AWS environment: 10.16.0.0/16 to fill out the destination case. Then in the target case, click on ``Peering Connection`` and select the peering connection that we configure ealier between the 2 VPCs: ``onpremVPC`` & ``awsVPC``. 
+Now, we will need the IP CIDR of the AWS VPC environment: 10.16.0.0/16 to fill out the destination case. Then in the target case, click on ``Peering Connection`` and select the peering connection that we configure ealier between the 2 VPCs: ``onpremVPC`` & ``awsVPC``. To finish click on ``save routes``.
 Once we've set that, this will mean that the On-premises environment knows how to route traffic through to the AWS environment.
+
+Next, we need to edit both of the AWS route tables. AWS has two routes tables: the Private and the Public. But in this demo, we're going to configure just the Public one because the procedure are the same. 
+Select awsPublicRT, click on the Route page and click on ``Edit routes``
+
+(image)
+
+Now, we will need the IP CIDR of the On-premises VPC environment: 192.168.10.0/24 to fill out the destination case. Then in the target case, click on ``Peering Connection`` and select the peering connection that we configure ealier between the 2 VPCs: ``onpremVPC`` & ``awsVPC``. To finish click on ``save routes``.
+
+(By the way, don't forget to configure the awsPrivateRT).
+
+(image)
+
+
+
+
+
+
+
+
+
+
 
 
 
