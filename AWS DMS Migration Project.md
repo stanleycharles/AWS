@@ -97,6 +97,43 @@ We're also to provisioning an ``EC2 instance`` which will function as the **web 
 
 This EC2 instance will be able to communicate with the On-Premise ``Database`` server and we will have migrated at least the web part of the architecture from the simulated On-Premises environment through to AWS. So Users can definitively connect to this EC2 intance and see the same web application
 
+First, We need to create an RDS Subnet Groups to the AWS VPC environment. We're going to use 2 availibility zones (us-east 1 a & b) for this subnet group. We're going to be telling RDS to put the database into the private subnet within the AWS environment. 
+
+We have to the select the 2 AWS private subnets to create a subnet group for our incoming RDS.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Subnets%20Enumeration.png)
+
+Click on ``Subnet Groups`` to put these 2 AWS private subnet into a group.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Subnets%20Groups.png)
+
+Now Let's create the RDS for the AWS environment and Choose the MariaDB database version.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20RDS.png)
+
+After fill out all the informations, click on **Create Database**. The RDS is created (20-30 min). 
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20RDS%20Activated.png)
+
+Now We have to create an EC2 Instance which will function as our AWS web server.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20EC2%20p.1.png)
+
+And Make sure that you select the AWS public subnet (A),
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20EC2%20p.2.png)
+
+The AWS EC2 is finally created. Now we can see this new EC2 with the On-Premises EC2.
+
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20EC2%20Activated.png)
+
+
+
+
+
+
+
+
 
 
 
