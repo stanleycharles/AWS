@@ -78,31 +78,9 @@ Now, we will need the IP CIDR of the On-premises VPC environment: 192.168.10.0/2
 
 (image)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Now we have the secure connection between the simulated On-premises environment. On the AWS environment, we have gateway objects configured in both of the VPCs and then routes configured at both sides so they can communicate.
 
-
-
-
-
-
+### Create & Configure the AWS Side infrastructure (App and DB)
 
 
 
