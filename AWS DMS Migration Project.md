@@ -131,11 +131,12 @@ The AWS EC2 is finally created. Now we can see this new EC2 with the On-Premises
 
 Select the AWS EC2 and click on Connect
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Session%20Manager%20Connect%20p.1.png)
 
 Select the Session Manager page and re-click on Connect
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Session%20Manager%20Connect%20p.2.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Bash%20Screen.png)
 
 Here's the instructions to install Wordpress
  - yum -y update
@@ -147,35 +148,39 @@ Here's the instructions to install Wordpress
 To configure Wordpress
  - nano /etc/ssh/sshd_config and put Password Authentification ``Yes``
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Configure%20Nano.png)
 
 And Create a ec2-user new password and restart the EC2 server
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Restart%20AWS%20EC2.png)
 
 Now, We have to go back to the On-premises ``Web application`` server 
 Before that we're going to ``note`` the Private IPv4 address of AWS EC2 web server somewhere: 10.16.63.147
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Note%20AWS%20Private%20IP.png)
 
 So Let's Now configure the ``Web application`` server.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20On-Prem%20Session%20Manager%20Connect.png)
 
 We're going to use this command. This is ``Secure Copy`` and this is going to copy the html folder to this destination so ``ec2-user@10.16.63.147:/home/ec2-user`` and confirm with the password we've just created.
 
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20SCP%20On-Prem%20Transfer%20to%20AWS%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20SCP%20On-Prem%20Transfer%20to%20AWS%20p.2.png)
+
 After the end of this Installation. Go back to the ``AWS EC2 Web server`` to verify if the Wordpress folder in In. We see all the Worpress Assets and configuration. The last command ``cp * -R /var/www/html`` will copy all of these files recursively into the web root server.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Session%20Manager%20Connect%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20SCP%20AWS%20Wordpress%20Success.png)
 
 And then the next block of commands will correct any permissions issues on those files that we've just copied.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20Permission%20Root%20File.png)
 
 To finish, Let's copy the Public IPv4 DNS name of the AWS EC2 Web Server to see if Wordpress is online into the AWS environment. But It's ``Still`` pointing at the ``On-Premises database`` server.
 
-(image)
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20DNS%20Public%20IP.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20Activated.png)
 
 ### Migrate Database & Cutover
 
