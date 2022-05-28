@@ -182,8 +182,25 @@ To finish, Let's copy the Public IPv4 DNS name of the AWS EC2 Web Server to see 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20DNS%20Public%20IP.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20Activated.png)
 
-### Migrate Database & Cutover
+### Final Stage: Migrate Database & Cutover
 
+We're going to complete a database migration from the ``On-Premise Database`` through to this ``RDS`` instance using ``DMS`` (Database Migration Services).
+
+So we will create a ``DMS replication Instance`` (see Diagram on the right, blue part) and using this to replicate all the data from the ``On-Premise Database`` across to ``RDS``. (see the purple arrow). 
+
+It will be using the ``DMS Replication Instance`` to act as an intermediary and it will be replicating all the charges through to the RDS instance ``(Data + Change written to target)`` (see Diagram)
+
+Now, when we're replicating data using DMS, you have a chice of either doing a ``full replication`` + or a ``full + CDC replication``. 
+
+If you have a high voulume application where you expect continued operations on the On-Premise side while we're doing the migration then we might want to pick ``Full + CDC Replication``.
+
+In our case, we're going to do just a standard full migration.
+
+
+
+
+
+ 
 
 
 
