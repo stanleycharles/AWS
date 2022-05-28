@@ -182,7 +182,7 @@ To finish, Let's copy the Public IPv4 DNS name of the AWS EC2 Web Server to see 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20DNS%20Public%20IP.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20Activated.png)
 
-### Final Stage: Migrate Database & Cutover
+### Final Stage: Migrate Database
 
 We're going to complete a database migration from the ``On-Premise Database`` through to this ``RDS`` instance using ``DMS`` (Database Migration Services).
 
@@ -198,7 +198,7 @@ In our case, we're going to do just a standard full migration.
 
 Let's go to the AWS management console and click on DMS. We need to create a subnet group. Name this subnet group and select the 2 AWS private subnets (A,B) then click on ``Create subnet group``
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20DMS%20Subnet%20Groups.png)
 
 Next Click on ``Replication Instances`` and create one. Name this Replication Instance, select the size and security groups then click on ``Create``
 
@@ -206,30 +206,31 @@ After that, Click on ``Endpoints``. We can think of these as the containers of t
 
 First, we'll be configuring a ``source endpoint``. Name the endpoint, the source engine, the on-prems IP address, the port, username and the on-prem database password.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Source%20Endpoint%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Source%20Endpoint%20p.2.png)
 
 The ``On-Premises Endpoint`` is activated.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Source%20Endpoint%20Activated.png)
 
 We're going to follow the same process again for the ``destination endpoint`` so re-lick on ``create endpoint``. Now, select the ``target endpoint`` et ``RDS DB Instance`` and fill out the case.
 
-(image)
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Destination%20Endpoint%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Destination%20Endpoint%20p.2.png)
 
 We've created the 2 endpoints neccessary for the migration.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Destination%20and%20Source%20Endpoints%20Activated.png)
 
 Next, we need to create the ``migration task``. This is the thing that uses the repilcation Instance together with both of these endpoints that we,ve just configured.
 
 So, let's click on ``Database Migration Tasks`` and create one. Click on the case and select the good replication instance, source & destination endpoints, the migration type and click on ``create task``.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Database%20Migration%20Task.png)
 
 After few minutes, the ``DMS`` has migrated all the data from the on-premises database through to RDS.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Database%20Migration%20Task%20Full.png)
 
   ---
   
