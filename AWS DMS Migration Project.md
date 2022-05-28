@@ -23,8 +23,30 @@ In the diagram
 ### Provision the environment
 
 After creating automatically The VPC & the On-Premises Infrastructures in the diagram via Cloudformation (yaml)
-- A VPC
-- 2 EC2: ``Web application`` is the simulated virtual machine web server , ``Database`` is the
+- A VPC with New/Empty RDS database. The aim is to transfer the on-premises datas. 
+- 2 EC2: ``Web application`` is the simulated virtual machine web server , ``Database`` is the simulated vitual self-managed database.
+
+In theory, the users (in the diagram) can access to the web application on-premises with their browser.
+
+###  Establish Private Connectivity Between the environments (VPC Peer)
+
+We're going to be provisioning private connectivity between the simulated on-premises environment on the left and the AWS environment on the right.
+In production, we would be using a VPN or a Direct connect but to simulate that, we're going to be configuring a ``VPC Peering Connection`` between the On-Premises and the AWS environment (see the orange tunnel in the diagram). This will allow us to connect over this secure connection between these 2 VPCs.
+
+On the AWS Management console, we can see these 2 VPCS, created via ``Cloud Formation``
+
+(image)
+
+Then, Let's create a 
+
+
+
+
+
+
+
+
+
 
 
 
