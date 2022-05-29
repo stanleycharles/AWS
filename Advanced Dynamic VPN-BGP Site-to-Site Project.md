@@ -10,7 +10,7 @@ In this diagram, we are going to create a hybrid architecture. You will create a
 
 This demo use AWS to simulate the on-premises environment, so we will be configuring 2 Linux-Based VPN servers which use strongSwan to provide the IPsec connectivity and a system known as FRR to do the BGP.
 
-
+After The On-premises & AWS environment created via ``Cloud Formation``, we're going to create 2 ``customer gateway`` objects on the VPC section: ``Router1`` & ``Router2`` .
 
   ---
   
