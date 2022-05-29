@@ -6,6 +6,8 @@
 
 ### Scope 
 
+In this diagram, we are going to create a hybrid architecture. You will create a Dynamic, Highly-Available, Accelerated, Site-to-Site VPN between an AWS location and simulated on-premises environment.
+
   ---
   
   ## Ressources
