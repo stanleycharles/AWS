@@ -28,6 +28,17 @@ We're going to use ``65016``. We could use **any number** in the range. End then
 
 Do the same process with ``ONPREM-ROUTER2`` with the same ASN number ``65016`` .
 
+Now, We've got two customer gateway objects created and these represent the routers within your simulated on-premises enviroment
+
+(image)
+
+To recap at this stage, we have ``6`` EC2 instances, ``4`` of which are inside the simulated on-premises environment. Ans ``2`` of which are within AWS. 
+
+At this stage, there is no connectivity between the AWS environment and the simulated on-premises environment.
+
+
+
+
 
 
 
