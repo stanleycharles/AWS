@@ -70,6 +70,27 @@ And Save et rename ``CONNECTION1ROUTER`` & ``CONNECTION2ROUTER``, these 2 txt fi
 
 (image)
 
+At this point, we will need to extract some important configuration items from the VPN configuration documents which just downloaded to configure the on-premises infratructure.
+
+Here's an exemple. 
+ - On the left, this is a random template just to extract the infomations necessary to configure these VPNs
+ - On the right, this is the extract of ``CONNECTION1ROUTER`` or ``CONNECTION2ROUTER`` that we've just downloaded to get these important connections.
+
+(image)
+
+Fill out all the informations necessary.
+
+Then we're going to establish the IPsec tunnels by configuring the on-premises side of the architecture and get started ``activating`` the 4 IPsec tunnels that we're going to be using. So that's two tunnels from each customer router, one to each of the AWS VPN endpoints. So this is how we archieve the high availability. We've got two customer premises routers and 2 VPN connections, each using 2 VPN endpoints so this ensures that we've got high availability at both the AWS side and the on-premises side. 
+
+In this part, There's going to be a lot of command line work that we need to do to configure the on-premises routers to be albe to establish IPsec tunnels between the on-premises side and the AWS side.
+
+
+
+
+
+
+
+
 
 
 
