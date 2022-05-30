@@ -10,7 +10,32 @@ In this diagram, we are going to create a hybrid architecture. You will create a
 
 This demo use AWS to simulate the on-premises environment, so we will be configuring 2 Linux-Based VPN servers which use strongSwan to provide the IPsec connectivity and a system known as FRR to do the BGP.
 
-After The On-premises & AWS environment created via ``Cloud Formation``, we're going to create 2 ``customer gateway`` objects on the VPC section: ``Router1`` & ``Router2`` .
+After The On-premises & AWS environment created via ``Cloud Formation``, we're going to create 2 ``customer gateway`` objects on the VPC section: ``Router1`` & ``Router2``.
+
+For that we need some important informations, specifically ``the private and public IP addresses`` of both of the customer routers that are running on-premises.
+
+ - Router1Private: ``192.168.12.38``
+ - Router1Public: ``3.86.70.61``
+ - Router2Private: ``192.168.12.214``
+ - Router2Public: ``3.87.35.101``
+
+First, We are going to create ``ONPREM-ROUTER1``. This representes Router1 running within the simulated on-premises envrionment. And we need the IP address of this router, the public IPv4 address ``3.86.70.61``. We are the intent to create a dynamic VPN so we need to select the dynamic option. we will need to enter a ``BGP ASN``. This type of VPN connection needs a ``unique ASN`` at the AWS side and the customer side.
+Most ASNs are publicly allocated but there are a number of private ASNs that we're able to use. So these start from ``64512`` and end at ``65534``. Now, these ASNs that we're entering represent the ASN that's used on the simulated on-premises environment. AWS will user their own, but we have the option of picking our own ASN.
+
+We're going to use ``65016``. We could use **any number** in the range. End then ``create the gateway``.
+
+(image)
+
+Do the same process with ``ONPREM-ROUTER2`` with the same ASN number ``65016`` .
+
+
+
+
+
+
+
+
+
 
   ---
   
