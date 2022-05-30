@@ -126,6 +126,10 @@ To verify these modifications, we can run an ``ifconfig`` and we should see 2 vi
 
 **Do exactly the same process with the ``ONPREMS-ROUTER2`` EC2**
 
+Now, after complete the congiguration of these 2 EC2 ``ONPREMS-ROUTER1`` & ``ONPREMS-ROUTER2``, click on ``Site-To-Site VPN Connection``. We will see the 2 connections that we configured. Select the 1st one and click on ``Tunnel Details``. And we can see that the tunnels are down because we don't yet have ``BGP`` connectivity. But what we should see under details is that the ``IPsec is Up``. That indicates that the IPsec tunnels between the on-premises ``router 1`` and AWS are up and functionnal. It should be the same with the second connection.
+
+
+
 
 
 
