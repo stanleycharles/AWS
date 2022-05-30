@@ -175,19 +175,22 @@ The ``C`` symbol next to these means these are connected routes so things that a
 
 We have a highly available VPN architecture that can survive the failure of an availability zone at the AWS, or the failure of a customer premises router at the on-premises side.
 
+**Last Verification !**
 
+Let's ``ping`` one of the 2 ``AWS-EC2`` (A or B) with ``Session Manager``.
 
+Before that copy the private IPv4 address of the ``ONPREM-SERVER1`` : 192.168.10.247
 
+(image)
 
+**Do the reverse process to ping ``AWS-EC2`` (A or B) ** : 10.16.46.197
 
+Both ``ping`` are working in both sides ``ONPREM-SERVER1`` & ``AWS-EC2`` (A or B).
 
+Because we've got a dynamic VPN in place, this traffic is free to go via any of the available tunnels. 
 
-
-
-
-
-
-
+This simulation could be applied in real world implementations. We have now implemented an extreme availability implementation of Site-To-Site VPN using ``Global Accelerator``. It uses dynamic routing, performance is increated by using the ``AWS Global Network`` and it has extreme high availability with 2 customer locations 2 VPN connections and eash of those has 2 tunnels going from 2 AWS endpoints back to the customer endpoints.
+This is a truly highly available dynamic design.
 
 
   ---
