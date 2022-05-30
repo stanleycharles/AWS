@@ -145,8 +145,8 @@ Let's start again to configure the EC2 ``ONPREMS-ROUTER1`` and select ``Session 
 
 Find and modify the script ``ffrouting-install.sh``which is known as ``FFR``. We need to make that file executable with ``chmod``. Then execute the script ``./ffrouting-install.sh``
 
-(image)
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20ffrouting%20Installation%20p.1.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20ffrouting%20Installation%20p.2.png)
 
 **Do the same process with the ``ONPREMS-ROUTER2`` EC2**
 
@@ -157,7 +157,7 @@ So we're going to change that, we're going to configure BGP to run across all of
 Go back to the ``ONPREMS-ROUTER1`` and select ``Session Manager``.
 In order to configure FR routing's BGP capability, we need to go into the shell that's used to configure that product. Follow these command line.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20vtysh%20Installation.png)
 
 **Do the same process with the ``ONPREMS-ROUTER2`` EC2**
 
@@ -165,11 +165,11 @@ Now, we've configured ``BGP`` on both of the on-premises routers, so ``router1``
 
 To verify these BGP connections, click on ``Site-to-Site VPN Connection`` and click on ``Tunnel Details``. We should see both of the tunnels are in the Upstate and see a number of BGP routes that are being exchanged as part of this connection.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20BGPs%20Activited.png)
 
 Type command line ``show ip route`` to see more details of the BGP connections.
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20vtysh%20Verification.png)
 
 The ``C`` symbol next to these means these are connected routes so things that are connected directly to this particular operating system. The line at the top with B means that this is a BGP learned route and we will be able to see the 10.16.0.0/16 has been learned via both ``vti1`` & ``vti2``. So we have high availability using this VPN because we can get to this AWS side network through either of the IPsec tunnels and the same configuration is true on the on-premises ``router2``, on the on-premises side now has 4 independent paths to get from the on-premises networks through to AWS and the same is true in reverse.
 
@@ -181,7 +181,8 @@ Let's ``ping`` one of the 2 ``AWS-EC2`` (A or B) with ``Session Manager``.
 
 Before that copy the private IPv4 address of the ``ONPREM-SERVER1`` : 192.168.10.247
 
-(image)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20AWS%20EC2-A%20Enum.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20Ping%20Test.png)
 
 **Do the reverse process to ping ``AWS-EC2`` (A or B) ** : 10.16.46.197
 
