@@ -111,6 +111,20 @@ Then we're going to edit the second file ``ipsec.secrets``. This time, we're goi
 (image)
 (image)
 
+The next file we need to edit is the script ``ipsec-vti.sh`` that brings up the IPsec tunnels whenever required.
+
+(image)
+(image)
+
+Now, at this point we're going to copy all of these 3 IPsec configuration files ``ipsec.conf``, ``ipsec.secrets``, ``ipsec-vti.sh`` into the ``etc`` directory and make the script file executable with a ``chmod``. Then Restart the ``ONPREMS-ROUTER1`` EC2.
+
+(image)
+
+To verify these modifications, we can run an ``ifconfig`` and we should see 2 virtual tunnel interfaces, ``vti1`` & ``vti2``. That means these tunnels interfaces are ``active`` and connected to AWS.
+
+(image)
+
+**Do exactly the same process with the ``ONPREMS-ROUTER2`` EC2**
 
 
 
