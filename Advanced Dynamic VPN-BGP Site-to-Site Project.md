@@ -84,6 +84,42 @@ Then we're going to establish the IPsec tunnels by configuring the on-premises s
 
 In this part, There's going to be a lot of command line work that we need to do to configure the on-premises routers to be albe to establish IPsec tunnels between the on-premises side and the AWS side.
 
+Now, there's going to be some configuration that we need to do on both of the ``on-premises routers`` in order to establish the IPsec tunnels between that router and AWS.
+
+Let's start to configure the EC2 ``ONPREMS-ROUTER1`` and select ``Session Manager``
+
+(image)
+(image)
+
+Find and modify the ``ipsec.conf`` file in order the add the values that we've extracted before.
+
+(image)
+
+Start to fill out the informations for the 2 IPsec tunnels and save the file.
+
+(image)
+(image)
+
+Then we're going to edit the second file ``ipsec.secrets``. This time, we're going to change a total of ``six`` placeholder values.
+ - ``CONN1_TUNNEL1_ONPREM_OUTSIDE_IP``
+ - ``CONN1_TUNNEL2_ONPREM_OUTSIDE_IP``
+ - ``CONN1_TUNNEL1_AWS_OUTSIDE_IP``
+ - ``CONN1_TUNNEL2_AWS_OUTSIDE_IP``
+ - ``CONN1_TUNNEL1_PresharedKey``
+ - ``CONN1_TUNNEL2_PresharedKey``
+ 
+(image)
+(image)
+
+
+
+
+
+
+
+
+
+
 
 
 
