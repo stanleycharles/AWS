@@ -9,27 +9,27 @@
 
 The `GENERAL` account will become the `MASTER` account for the organisation
 
-We will invite `HR` & `DEVELOPMENT` accounts as MEMBER accounts and create the `Finance` account as a MEMBER account.
+We will **invite** The `HR` account as MEMBER accounts and **create** the `Development` account as a MEMBER account.
 
 Before that, we will need the email address of the master account (who also name as the billing master)
  - mobbyentreprise+masterroot@gmail.com (master account)
 
-And 3 seperate emails of different existing  AWS accounts and associate them to the AWS Organisations.
+And 3 seperate emails of different existing AWS accounts in order to associate them to the AWS Organisations.
  - mobbyentreprise+hr@gmail.com (human ressources)
  - mobbyentreprise+dev@gmail.com (development)
  - mobbyentreprise+fin@gmail.com (finance)
 
-The Master account will create and be convert to the management account of this AWS Organisation.
+The ``Master account`` will create and be convert to the management account of this AWS Organisation.
 
-To integrate HR & Development accounts into  the organisation, the Master account will sent a **verification email** to them  
+To integrate The HR account into the organisation, the Master account will sent a **verification email** to them. 
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Invitation.png)
 
-After the validation, HR & Development will integrate the organisation.
+After the validation, HR will integrate the organisation.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Accounts.png)
 
-Now, we will see how we can role switch into this HR AWS account witch is now a member of the organisation.
+Now, we will see how we can role-switch into this HR AWS account witch is now a member of the organisation.
 
 We will also create an `OrganizationAccountAccessRole` in the `Master Account`, and use this role to switch between accounts.
 
@@ -37,7 +37,7 @@ The role `OrganizationAccountAccessRole` will get the **administrator access** t
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Back.png)
 
-And fill out all the cases: The Account HR or Development ID number, a role and a random display name.
+And fill out all the cases: The Account HR or Finance ID number, a role and a random display name.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-HR.png) 
 
@@ -46,11 +46,11 @@ This is just creating a shortcut so you can easily access in the future. And it'
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Role-HR.jpg)
 
-And Last thing, to integrate the Finance account into the organisation, we will create a **brand new** account directly with AWS Organisations. This time won't invite an existing AWS account like we did with `HR` & `Development`.
+And Last thing, to integrate the Development account into the organisation, we will create a **brand new** account directly with AWS Organisations. This time won't invite an existing AWS account like we did with `HR`.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20AWS%20Organisations%20-%20New%20Account-Dev.png)
 
-Now, the organisation have 3 (4) accounts easily switchable if you already did the same adding role process to the Finance account into the organisation.
+Now, the organisation have 3 (4) accounts easily switchable if you already did the same adding role process to the Development account into the organisation.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-Dev.png)
 
