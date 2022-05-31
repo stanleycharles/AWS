@@ -34,7 +34,7 @@ Fill out The ``Organization name``, The ``Directory DNS name``, ``NetBIOS name``
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Directory%20Service%20-%20Fill%20out%20pt.1.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Directory%20Service%20-%20Fill%20out%20pt.2.png)
 
-In the next step, we should select the VPC just created and 2 subnets ``2 APP subnets - A,B`` to deploy the ``Directory Service``. (see the Diagram).
+In the next step, we should select the VPC just created and 2 subnets ``2 APP subnets - A,B`` to deploy the ``Directory Service`` (``see the Diagram``).
 By setting those, we select which subnet will have a network interface into them for the Directory Service.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Directory%20Service%20-%20Select%20VPC-SN.png)
