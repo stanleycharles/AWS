@@ -21,7 +21,7 @@ And 3 seperate emails of different existing AWS accounts in order to associate t
 
 The ``Master Account`` will create and be convert to the ``Management Account`` of this AWS Organisation.
 
-To integrate The ``HR`` account into the organisation, the Master account will sent a **verification email** to them. 
+To integrate The ``HR`` account into the organisation, the Master account will sent a ``verification email`` to them. 
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Invitation.png)
 
