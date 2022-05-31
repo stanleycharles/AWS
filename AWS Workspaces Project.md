@@ -5,7 +5,10 @@
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20Diagram.png)
 
 `Amazon Workspaces` is a Desktop As A Service (DAAS) - Home Working / Office
-It delivers managed `Linux` and `Windows` Desktops of various sizes and capabilities and integrates fully with AWS products and Services. It delivers consistent desktop from anywhere (apps & state).
+
+It delivers managed `Linux` and `Windows` Desktops of various sizes and capabilities and integrates fully with AWS products and Services. 
+
+It delivers consistent desktop from anywhere (apps & state).
 
 We can also use the ``AD Connector`` mode of ``Directory Service`` if you want to integrate with your existing on premises ``Active Directory`` without having any directory infrastructure directly running within AWS. Or we can use the ``Managed Microsoft Active Directory`` mode of ``Directory Service`` if you need to utilize a **native** ``Microsoft Active Directory`` and we want to integrate it with Workspaces.
 
