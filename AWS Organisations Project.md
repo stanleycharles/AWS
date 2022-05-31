@@ -1,22 +1,23 @@
 # AWS Organisations Project
 
-## How to create a cloud organisation infrastruture for an entreprise on AWS
+## How to create a cloud organisation infrastructure for an entreprise on AWS
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
 
 ### Scope
+ - ``Mobby Entreprise`` needs to centralize all his AWS accounts with ``AWS Organisations``.
 
 The `GENERAL` account will become the `MASTER` account for the organisation
 
 We will invite `HR` & `DEVELOPMENT` accounts as MEMBER accounts and create the `Finance` account as a MEMBER account.
 
-Before that, you'll need the email address of the master account (who also name as the billing master)
- - masteraccount@gmail.com
+Before that, we will need the email address of the master account (who also name as the billing master)
+ - mobbyentreprise+masterroot@gmail.com (master account)
 
 And 3 seperate emails of different existing  AWS accounts and associate them to the AWS Organisations.
- - hr@gmail.com
- - development@gmail.com
- - finance@gmail.com
+ - mobbyentreprise+hr@gmail.com (human ressources)
+ - mobbyentreprise+dev@gmail.com (development)
+ - mobbyentreprise+fin@gmail.com (finance)
 
 The Master account will create and be convert to the management account of this AWS Organisation.
 
