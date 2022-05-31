@@ -29,7 +29,7 @@ Select **Simple AD**
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Directory%20Service%20-%20Select%20The%20AD.png)
 
 Then Select the ``Small`` AD size (because cheaper)
-Fill out The Organization name, The Directory DNS name, NetBIOS name and Password
+Fill out The ``Organization name``, The ``Directory DNS name``, ``NetBIOS name`` and ``Password``.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Directory%20Service%20-%20Fill%20out%20pt.1.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Directory%20Service%20-%20Fill%20out%20pt.2.png)
