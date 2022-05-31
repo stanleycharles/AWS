@@ -5,7 +5,7 @@
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
 
 ### Scope
-[ ] ``Mobby Entreprise`` needs to centralize all his AWS accounts with ``AWS Organisations``.
+####``Mobby Entreprise`` needs to centralize all his AWS accounts with ``AWS Organisations``.
 
 The `GENERAL` account will become the `MASTER` account for the organisation
 
