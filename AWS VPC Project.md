@@ -49,8 +49,8 @@ We need to implement the diagram structure which actually ``12 subnets`` on ``3 
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20Subnet%20Calculator.png)
 
- - The Entreprise can become a huge global entity
- - Use the 10.16 -> 10.127 rangs avoiding Google
+ - The Entreprise can become a ``huge global entity``
+ - Use the 10.16 -> 10.127 rangs ``avoiding`` Google
  - So the 1st subnet will be 10.16.0.0 and the last 10.16.176.0
  - Implemented in 3 availability zones A, B, C
  - Spared in 4 subnets sections: Reserved, database (db), application (app), web
