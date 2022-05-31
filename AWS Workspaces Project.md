@@ -10,7 +10,7 @@ It delivers managed `Linux` and `Windows` desktops of various sizes and capabili
 We can also use the ``AD Connector`` mode of ``Directory Service`` if you want to integrate with your existing on premises ``Active Directory`` without having any directory infrastructure directly running within AWS. 
 Or we can use the ``Managed Microsoft Active Directory`` mode of ``Directory Service`` if you need to utilize a **native** ``Microsoft Active Directory`` and want to integrate it with Workspaces.
 
-Each Workspace uses a **network interface** ``(ENI)`` which is injected into a VPC. And for almost all the networking that a workspace does, it uses this VPC and any associated network infrastructure.
+Each Workspace uses a ``**network interface**`` ``(ENI)`` which is injected into a VPC. And for almost all the networking that a workspace does, it uses this VPC and any associated network infrastructure.
 
 Workspaces are accessed using ``client software`` installed on a normal desktop or laptop.
 Workspaces can access on-premises networks over a ``VPN`` or a ``Direct Connect``.
