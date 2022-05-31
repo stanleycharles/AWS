@@ -39,12 +39,12 @@ The role `OrganizationAccountAccessRole` will get the **administrator access** t
 
 And fill out all the cases: The Account HR or Development ID number, a role and a random display name.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-Prod.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-HR.png) 
 
 It's going to create an entry within the console GUI and this is stored in your browser.
 This is just creating a shortcut so you can easily access in the future. And it's actually using the `OrganizationAccountAccessRole` API Call to assume the role that we just created aka the administrator access role.
 
-![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Role-Prod.png)
+![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Role-HR.jpg)
 
 And Last thing, to integrate the Finance account into the organisation, we will create a **brand new** account directly with AWS Organisations. This time won't invite an existing AWS account like we did with `HR` & `Development`.
 
