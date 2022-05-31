@@ -6,19 +6,19 @@
 
 ### Reminder
 
-Steps through the design choices around VPC design and IP planning.
+#### Steps through the design choices around ``VPC design`` and ``IP planning``.
 
-When creating a VPC, we'll need first, to decide on is the IP range that the VPC will use: The ``VPC Cider``. 
-Deciding on an IP plan and VPC structure in advance is one of the most critically important things you will do as the solutions Architect because it's not easy to change later and it will cause you a world of pain if you don't get it right.
+When creating a ``VPC``, we will need first, to decide the ``IP range`` that the VPC will use: The ``VPC Cider``. 
+Deciding on an IP plan and VPC structure ``in advance`` is one of the ``most critically`` important things you will do as the ``Solutions Architect`` because it's not easy to change ``later`` and it will cause you ``a world of pain`` if you don't get it right.
 
-Now when your start this design process, there are a few things that you need to keep in mind:
+Now when your start this design process, there are a ``few things`` that you need to keep in mind:
 
  - What size should the VPC be
  - Are there any Networks we can't use...
  - VPC's Cloud, On-premises. Partners & Vendors
  - VPC Structure - Tiers & Resiliency (Availability) Zones
  
- IP Ranges to Avoid when creating a Business VPC:
+ IP Ranges ``to Avoid`` when creating a ``Business`` VPC:
  
   - 192.168.10.0/24 (192.168.10.0 -> 192.168.10.255)
   - 10.0.0.0/16 ``(AWS)`` (10.0.0.0 -> 10.0.255.255)
@@ -28,7 +28,7 @@ Now when your start this design process, there are a few things that you need to
   - 192.168.20.0/24 ``(NYC)`` (192.168.20.0 ->192.168.20.255
   - 192.168.25.0/24 ``(Seattle)`` (192.168.25.0 -> 192.168.25.255)
 
-More Considerations
+More Considerations:
 
  - VPC minimum /28 (16 IPs), maximum /16 (65456 IPs)
  - Personal preference for the 10.x.y.z range
@@ -43,9 +43,9 @@ VPC Sizing Model
 
 ### Scope
 
-Step through how to implement the multi-tier subnet design for an entreprise including IPv6 configuration for subnets
+#### Step through how to implement the ``Multi-tier Subnet Design`` for an entreprise including ``IPv6`` configuration for subnets,
 
-We're going to be implementing the diagram structure which actually 12 subnets on 3 availability zones. This subnet calculator site will give us all the ip address structure that we will need to configure the subnets on the VPC.
+We need to implement the diagram structure which actually ``12 subnets`` on ``3 availability zones``. This ``Subnet Calculator`` site will give us all the ``ip address structure`` that we will need to configure the subnets on the VPC.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20Subnet%20Calculator.png)
 
@@ -82,17 +82,17 @@ Recap
  - /16 per VPC - 3 AZ (+1), 3 Tiers (+1) - 16 subnets
  - /16 split into 16 subnets = /20 per subnet (4091 IPs)
 
-Create a subnet manually (exemple: ``sn-reserved-A 10.16.0.0/20 AZA IPv6 00``)
+``Create`` a subnet manually (exemple: ``sn-reserved-A 10.16.0.0/20 AZA IPv6 00``)
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20%20-%20Create%20Subnet.png)
 
-And do the procedure for the 11 others subnets (same process).
+> And do the procedure for the ``11 others subnets`` (same process).
 
-Now you can see the 12 subnets by name
+Now you can see the 12 subnets ``by name``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20VPC%20Enumeration.png)
 
-Finally, Auto-assign the Ipv6 mode manually on the 12 subnets. (exemple: ``sn-app-A``)
+Finally, ``Auto-assign`` the ``Ipv6`` mode manually on the 12 subnets. (exemple: ``sn-app-A``)
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20-%20Enable%20IPv6.png)
 
@@ -100,14 +100,10 @@ Finally, Auto-assign the Ipv6 mode manually on the 12 subnets. (exemple: ``sn-ap
 
  - First we create and attach an ``Internet Gateway`` to the VPC. 
  - So then we create a ``custom route table`` and we associate it with the web subnet.
- - Then we add IPv4, and optionlly IPv6 default routes to the table routes with the target being the Internet gateway
- - Then finally we configure the subnets to allocate IPv4 addresses
+ - Then we add ``IPv4``, and optionlly ``IPv6`` default routes to the table routes with the target being the ``Internet gateway``.
+ - Then finally we configure the subnets to allocate IPv4 addresses.
 
-So, after this config, the subnet is classified as being a public subnet and any services inside that subnet with public IP addresses can communicate to the internet and vice-versa, and also they can communication with the AWS public zone as long as there's no other security limitations that are in play.
-
-
-
-... 
+After this config, the subnet is classified as being a ``Public Subnet`` and any services inside that subnet with ``public IP addresses`` can communicate to the internet and vice-versa. And also they can communication with the ``AWS Public Zone`` as long as there's no other security limitations that are in play.
 
   ---
   
