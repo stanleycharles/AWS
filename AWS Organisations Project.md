@@ -11,7 +11,7 @@ The `GENERAL` account will become the `MASTER` account for the organisation
 
 We will **invite** The `HR` account as MEMBER accounts and **create** the `Development` account as a MEMBER account.
 
-Before that, we will need the email address of ``the master account`` (who also name as the billing master)
+Before that, we will need the email address of ``the Master Account`` (who also name as the billing master)
  - mobbyentreprise+masterroot@gmail.com (master account)
 
 And 3 seperate emails of different existing AWS accounts in order to associate them to the AWS Organisations.
@@ -19,7 +19,7 @@ And 3 seperate emails of different existing AWS accounts in order to associate t
  - mobbyentreprise+dev@gmail.com (development)
  - mobbyentreprise+fin@gmail.com (finance)
 
-The ``Master account`` will create and be convert to the ``management account`` of this AWS Organisation.
+The ``Master Account`` will create and be convert to the ``Management Account`` of this AWS Organisation.
 
 To integrate The ``HR`` account into the organisation, the Master account will sent a **verification email** to them. 
 
@@ -42,7 +42,7 @@ And fill out all the cases: The Account ``HR`` or ``Finance`` ID number, a role 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Create%20Switch-Role-HR.png) 
 
 It's going to create an entry within the console GUI and this is stored in your browser.
-This is just creating ``a shortcut`` so you can easily access in the future. And it's actually using the `OrganizationAccountAccessRole` API Call to assume the role that we just created aka the ``administrator access`` role.
+This is just creating ``a shortcut`` so you can easily access in the future. And it's actually using the `OrganizationAccountAccessRole` API Call to assume the role that we just created aka the ``Administrator Access`` role.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisation%20-%20Switch-Role-HR.jpg)
 
