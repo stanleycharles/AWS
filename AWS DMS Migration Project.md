@@ -103,106 +103,106 @@ We have to the select the ``2 AWS private subnets`` to create a ``Subnet Group``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Subnets%20Enumeration.png)
 
-Click on ``Subnet Groups`` to put these 2 AWS private subnet into a group.
+Click on ``Subnet Groups`` to put these ``2`` AWS private subnet into a group.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Subnets%20Groups.png)
 
-Now Let's create the RDS for the AWS environment and Choose the MariaDB database version.
+Now Let's create the ``RDS`` for the AWS environment and Choose the ``MariaDB`` database version.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20RDS.png)
 
-After fill out all the informations, click on **Create Database**. The RDS is created (20-30 min). 
+After fill out all the informations, click on ``Create Database``. The ``RDS`` is created (20-30 min). 
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20RDS%20Activated.png)
 
-Now We have to create an EC2 Instance which will function as our AWS web server.
+Now We have to create an ``EC2`` Instance which will function as our ``AWS web server``.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20EC2%20p.1.png)
 
-And Make sure that you select the AWS public subnet (A),
+And Make sure that you select the ``AWS public subnet`` (A),
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20EC2%20p.2.png)
 
-The AWS EC2 is finally created. Now we can see this new EC2 with the On-Premises EC2.
+The ``AWS EC2`` is finally created. Now we can ``see`` this new ``EC2`` with the ``On-Premises EC2``.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20EC2%20Activated.png)
 
 ### Wordpress Installation on the AWS EC2 web server
 
-Select the AWS EC2 and click on Connect
+Select the ``AWS EC2`` and click on ``Connect``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Session%20Manager%20Connect%20p.1.png)
 
-Select the Session Manager page and re-click on Connect
+Select the ``Session Manager`` page and re-click on ``Connect``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Session%20Manager%20Connect%20p.2.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Bash%20Screen.png)
 
-Here's the instructions to install Wordpress
+Here's the instructions to ``install Wordpress``
  - yum -y update
  - yum -y install httpd mariadb
  - amazon-linux-extras install -y php7.2
  - systemctl enable httpd
  - systemctl start httpd
 
-To configure Wordpress
+To configure ``Wordpress``
  - nano /etc/ssh/sshd_config and put Password Authentification ``Yes``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Configure%20Nano.png)
 
-And Create a ec2-user new password and restart the EC2 server
+And Create a ``ec2-user`` new password and ``restart`` the EC2 server
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Restart%20AWS%20EC2.png)
 
-Now, We have to go back to the On-premises ``Web application`` server 
-Before that we're going to ``note`` the Private IPv4 address of AWS EC2 web server somewhere: 10.16.63.147
+Now, We have to go back to the ``On-premises Web application`` server 
+Before that we're going to ``note`` the ``Private IPv4 address`` of ``AWS EC2 web server`` somewhere: ``10.16.63.147``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Note%20AWS%20Private%20IP.png)
 
-So Let's Now configure the ``Web application`` server.
+So Let's Now configure the ``Web application server``.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20On-Prem%20Session%20Manager%20Connect.png)
 
-We're going to use this command. This is ``Secure Copy`` and this is going to copy the html folder to this destination so ``ec2-user@10.16.63.147:/home/ec2-user`` and confirm with the password we've just created.
+We are going to use this command. This is ``Secure Copy`` and this is going ``to copy`` the html folder to this destination so ``ec2-user@10.16.63.147:/home/ec2-user`` and confirm with ``the password`` we've just created.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20SCP%20On-Prem%20Transfer%20to%20AWS%20p.1.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20SCP%20On-Prem%20Transfer%20to%20AWS%20p.2.png)
 
-After the end of this Installation. Go back to the ``AWS EC2 Web server`` to verify if the Wordpress folder in In. We see all the Worpress Assets and configuration. The last command ``cp * -R /var/www/html`` will copy all of these files recursively into the web root server.
+After the end of this Installation. Go back to the ``AWS EC2 Web server`` ``to verify`` if the Wordpress folder in In. We see ``all`` the Worpress Assets and configuration. The last command ``cp * -R /var/www/html`` will copy all of these files ``recursively`` into the ``web root server``.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Session%20Manager%20Connect%20p.1.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20SCP%20AWS%20Wordpress%20Success.png)
 
-And then the next block of commands will correct any permissions issues on those files that we've just copied.
+And then the next block of commands will correct ``any permissions issues`` on those files that we've just copied.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20Permission%20Root%20File.png)
 
-To finish, Let's copy the Public IPv4 DNS name of the AWS EC2 Web Server to see if Wordpress is online into the AWS environment. But It's ``Still`` pointing at the ``On-Premises database`` server.
+To finish, Let's copy the ``Public IPv4 DNS name`` of the ``AWS EC2 Web Server`` to see if ``Wordpress`` is online into the ``AWS environment``. But It's ``Still`` pointing at the ``On-Premises database`` server.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20DNS%20Public%20IP.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20AWS%20WP%20Activated.png)
 
 ### Final Stage: Migrate Database
 
-We're going to complete a database migration from the ``On-Premise Database`` through to this ``RDS`` instance using ``DMS`` (Database Migration Services).
+We are going ``to complete`` a database migration from the ``On-Premise Database`` through to this ``RDS`` instance using ``DMS`` (Database Migration Services).
 
-So we will create a ``DMS replication Instance`` (see Diagram on the right, blue part) and using this to replicate all the data from the ``On-Premise Database`` across to ``RDS``. (see the purple arrow). 
+So we will create a ``DMS replication Instance`` (``see Diagram on the right, blue part``) and using this ``to replicate`` all the data from the ``On-Premise Database`` across to ``RDS``. (``see the purple arrow``). 
 
-It will be using the ``DMS Replication Instance`` to act as an intermediary and it will be replicating all the charges through to the RDS instance ``(Data + Change written to target)`` (see Diagram)
+It will use the ``DMS Replication Instance`` to act as an ``intermediary`` and it will replicate ``all the changes`` through to the RDS instance ``(Data + Change written to target)`` (see Diagram)
 
-Now, when we're replicating data using DMS, you have a chice of either doing a ``full replication`` + or a ``full + CDC replication``. 
+Now, when we are replicating data using DMS, you have a chice of either doing a ``full replication`` + or a ``full + CDC replication``. 
 
-If you have a high voulume application where you expect continued operations on the On-Premise side while we're doing the migration then we might want to pick ``Full + CDC Replication``.
+If you have a ``high voulume application`` where you expect ``continued operations`` on the ``On-Premise side`` while we are ``doing the migration`` then we might want to pick ``Full + CDC Replication``.
 
-In our case, we're going to do just a standard full migration. 
+In our case, we are going to do just a ``Standard Full Migration``. 
 
-Let's go to the AWS management console and click on DMS. We need to create a subnet group. Name this subnet group and select the 2 AWS private subnets (A,B) then click on ``Create subnet group``
+Let's go to the ``AWS management console`` and click on ``DMS``. We need to create a ``Subnet Group``. Name this subnet group and select the ``2 AWS private subnets (A,B)`` then click on ``Create subnet group``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20DMS%20Subnet%20Groups.png)
 
-Next Click on ``Replication Instances`` and create one. Name this Replication Instance, select the size and security groups then click on ``Create``
+Next Click on ``Replication Instances`` and create one. Name this ``Replication Instance``, select the ``size`` and ``security groups`` then click on ``Create``
 
-After that, Click on ``Endpoints``. We can think of these as the containers of the configuration for the source and destination databases. 
+After that, Click on ``Endpoints``. We can think of these as ``the containers of the configuration`` for the ``source`` and ``destination`` databases. 
 
 First, we'll be configuring a ``source endpoint``. Name the endpoint, the source engine, the on-prems IP address, the port, username and the on-prem database password.
 
@@ -213,12 +213,12 @@ The ``On-Premises Endpoint`` is activated.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Source%20Endpoint%20Activated.png)
 
-We're going to follow the same process again for the ``destination endpoint`` so re-lick on ``create endpoint``. Now, select the ``target endpoint`` et ``RDS DB Instance`` and fill out the case.
+We are going to follow the same process again for the ``destination endpoint`` so re-lick on ``create endpoint``. Now, select the ``target endpoint`` et ``RDS DB Instance`` and fill out the case.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Destination%20Endpoint%20p.1.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Destination%20Endpoint%20p.2.png)
 
-We've created the 2 endpoints neccessary for the migration.
+We've created the ``2`` endpoints neccessary for the migration.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Destination%20and%20Source%20Endpoints%20Activated.png)
 
@@ -228,7 +228,7 @@ So, let's click on ``Database Migration Tasks`` and create one. Click on the cas
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Create%20Database%20Migration%20Task.png)
 
-After few minutes, the ``DMS`` has migrated all the data from the on-premises database through to RDS.
+After few minutes, the ``DMS`` has migrated ``all the data`` from the ``On-premises Database`` through to ``RDS``.
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20-%20Database%20Migration%20Task%20Full.png)
 
