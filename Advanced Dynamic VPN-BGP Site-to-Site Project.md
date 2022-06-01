@@ -27,7 +27,7 @@ We're going to use ``65016``. We could use **any number** in the range. End then
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20Create%20Customer%20Gateway.png)
 
-Do the same process with ``ONPREM-ROUTER2`` with the same ASN number ``65016`` .
+> Do the same process with ``ONPREM-ROUTER2`` with the same ASN number ``65016`` .
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20Customers%20Gateways%20Created.png)
 
@@ -51,7 +51,7 @@ Click and Create on ``Transit Gateway Attachments``. Select the existing ``trans
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20Create%20Transit%20Gateway%20Attachment%20p.1.png)
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20Create%20Transit%20Gateway%20Attachment%20p.2.png)
 
-Do the same process with ``ONPREM-ROUTER2``.
+> Do the same process with ``ONPREM-ROUTER2``.
 
 To see the VPN creations, Click on ``Site-to-Site VPN Connections``.
 
@@ -65,7 +65,7 @@ Now at this point, what we need to do is ``to download`` the configuration for e
 
 For that, click on ``Download Configuration`` and select these options.
 
-**Do the same process with the 2nd ``Site-To-Site VPN connection``**
+> Do the same process with the 2nd ``Site-To-Site VPN connection``
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/AWS%20VPNBGP%20-%20Download%20Customer%20Gateway%20Config.png)
 
