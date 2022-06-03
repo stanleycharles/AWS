@@ -23,6 +23,4 @@ Security
  - Hacking the Cloud : https://hackingthe.cloud
  - Stratus : https://stratus-red-team.cloud
  - Cloud MITRE Matrix : https://attack.mitre.org/matrices/enterprise/cloud
-
-Ressouces
  - Break into CloudSec : https://www.nojones.net/posts/breaking-into-cloudsec
