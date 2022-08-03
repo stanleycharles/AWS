@@ -4,6 +4,8 @@
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20DMS%20Migration%20Project/AWS%20DMS%20Migration%20Diagram.png)
 
+- Project inspired by [Adrian Cantrill](https://cantrill.io/) 
+
 ``AWS Database Migration Service`` helps you to ``migrate`` databases to AWS quickly and securely. The source database remains ``fully operational`` during the migration, ``minimizing downtime`` to applications that rely on the database. The ``AWS Database Migration Service`` can migrate your data from most widely used commercial and open-source databases.
 
 ### Scope
