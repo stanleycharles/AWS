@@ -4,6 +4,8 @@
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Project/Advanced%20Dynamic%20VPN-BGP%20Site-to-Site%20Diagram.png)
 
+- Project inspired by [Adrian Cantrill](https://cantrill.io/) 
+
 ### Scope 
 
 In this diagram, we are going to create a ``hybrid architecture``. You will create a ``Dynamic``, ``Highly-Available``, ``Accelerated``, ``Site-to-Site VPN`` between an ``AWS location`` and ``simulated on-premises environment``. We are going to create both sides of this architecture using ``Cloud Formation``. 
