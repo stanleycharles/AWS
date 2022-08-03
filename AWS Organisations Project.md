@@ -4,6 +4,8 @@
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project/AWS%20Organisations%20Diagram.png)
 
+- Project inspired by [Adrian Cantrill](https://cantrill.io/) 
+
 ### Scope
 - ``Mobby Entreprise`` needs to centralize all his AWS accounts with ``AWS Organisations``.
 
