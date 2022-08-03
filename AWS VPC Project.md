@@ -4,6 +4,8 @@
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20VPC%20Project/AWS%20VPC%20Project%20Diagram.png)
 
+- Project inspired by [Adrian Cantrill](https://cantrill.io/) 
+
 ### Reminder
 
 #### Steps through the design choices around ``VPC design`` and ``IP planning``.
