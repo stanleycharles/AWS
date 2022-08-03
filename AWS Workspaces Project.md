@@ -4,6 +4,8 @@
 
 ![This is an image](https://github.com/stanleycharles/AWS/blob/main/AWS%20Workspaces%20Project/AWS%20Workspaces%20Diagram.png)
 
+- Project inspired by [Adrian Cantrill](https://cantrill.io/) 
+
 `Amazon Workspaces` is a Desktop As A Service (DAAS) - Home Working / Office from anywhere. 
 It delivers managed `Linux` and `Windows` desktops of various sizes and capabilities and integrates fully with AWS products and Services. 
 
