@@ -16,8 +16,11 @@ Tools
 Networking
  - IP / Subnet Calculator : https://www.site24x7.com/tools/ipv4-subnetcalculator.html
  
- Docker
-  - The Ultimate Docker Cheatsheet : https://dockerlabs.collabnix.com/docker/cheatsheet
+Docker
+ - The Ultimate Docker Cheatsheet : https://dockerlabs.collabnix.com/docker/cheatsheet
+
+DevOps
+ - DevOps Roadmap : https://roadmap.sh/devops
 
 Security
  - AWS SMR : https://summitroute.com/downloads/aws_security_maturity_roadmap-Summit_Route.pdf
