@@ -20,7 +20,7 @@ Docker
  - The Ultimate Docker Cheatsheet : https://dockerlabs.collabnix.com/docker/cheatsheet
 
 DevOps
- - DevOps Roadmap : https://roadmap.sh/devops
+ - DevOps Roadmap : https://roadmap.sh/devops / https://cloud-esprit-libre.ovh/s/z8AMZbqs6mxd5CH#mindmap
 
 Security
  - AWS SMR : https://summitroute.com/downloads/aws_security_maturity_roadmap-Summit_Route.pdf
