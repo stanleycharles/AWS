@@ -16,6 +16,7 @@ Tools
 Networking
  - IP / Subnet Calculator : https://www.site24x7.com/tools/ipv4-subnetcalculator.html
  - Visual Subnet Calculator : https://www.davidc.net/sites/default/subnets/subnets.html
+ - IP Calculator : https://jodies.de/ipcalc
  
 Docker
  - The Ultimate Docker Cheatsheet : https://dockerlabs.collabnix.com/docker/cheatsheet
