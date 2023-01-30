@@ -17,13 +17,6 @@ Networking
  - IP / Subnet Calculator : https://www.site24x7.com/tools/ipv4-subnetcalculator.html
  - Visual Subnet Calculator : https://www.davidc.net/sites/default/subnets/subnets.html
  - IP Calculator : https://jodies.de/ipcalc
- 
-Docker
- - The Ultimate Docker Cheatsheet : https://dockerlabs.collabnix.com/docker/cheatsheet
-
-DevOps
- - DevOps Roadmap : https://roadmap.sh/devops
- - DevOps Mindmap : https://cloud-esprit-libre.ovh/s/z8AMZbqs6mxd5CH#mindmap
 
 Security
  - AWS SMR : https://summitroute.com/downloads/aws_security_maturity_roadmap-Summit_Route.pdf
