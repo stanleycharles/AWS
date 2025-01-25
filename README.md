@@ -1,6 +1,6 @@
 # AWS
 
-Cloud Architecture Methodology + Security 
+AWS-GCP Cloud Architecture Methodology + Security 
 
 AWS Cloud Projects
  - [AWS Organisations](https://github.com/stanleycharles/AWS/blob/main/AWS%20Organisations%20Project.md)
